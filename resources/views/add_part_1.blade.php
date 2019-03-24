@@ -1,5 +1,10 @@
 @extends('layouts.master')
 @section('title','add part 1')
+
+@section("css")
+    <link rel="stylesheet" type="text/css" href="{{URL::asset("css/home_css_part1.css")}}">
+@endsection
+
 @section('navbar')
     @parent
 @endsection
@@ -12,13 +17,6 @@
     <br/>
     <br/>
     <div class="body row">
-        <div class="row">
-            <div class="col-12 time-detail">
-                <button class="timer-btn">Timer</button>
-                <span class="clock">00:00:00</span>
-            </div>
-        </div>
-
         <div class="content-container col-12 col-sm-11 col-md-10 col-lg-9 col-xl-8">
             <div class="header-content">
                 <div>Practic part 1 (10 sentences), *(Admin phải upload tất cả các file và chọn đáp án đúng cho từng câu)</div>
@@ -206,16 +204,12 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../js/wow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../js/home-js.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-@endsection
 
+
+@endsection
+@section('js')
+    <script type="text/javascript" src="../js/home-js.js"></script>
+@endsection
 @section('footer')
     @parent
 @endsection
